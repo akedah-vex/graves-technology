@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
+
 
 :root {
   --background: #ffffff;
@@ -11,11 +13,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -24,4 +28,79 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.electrolize-regular {
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* slide in from top animation definition */
+
+@theme {
+  --animate-fade-in: fade-in 1s ease-in-out forwards;
+  --animate-fade-in-slow: fade-in 2s ease-in-out forwards;
+  
+  --animate-slide-in-top: slide-in-top 1s ease-in-out forwards;
+  --animate-slide-in-top-fast: slide-in-top 0.5s ease-in-out forwards;
+  --animate-slide-in-top-fast-delay: slide-in-top 0.5s ease-in-out 0.5s forwards;
+
+  --animate-slide-in-left: slide-in-left 1s ease-in-out forwards;
+  --animate-slide-in-right: slide-in-right 1s ease-in-out forwards;
+
+  --animate-fade-in-delay: fade-in-delay 1s ease-in-out 0.5s forwards;
+
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* fade in animation definition */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* fade in with timer delay */
+  @keyframes fade-in-delay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }

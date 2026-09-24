@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Graves Technology",
-  description: "Household IT support and sovereign technology solutions",
+  description: "Family household sovereign technology solutions and IT support",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -22,8 +22,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col" style={{fontFamily: "electrolize"}}>{children}</body>
     </html>
   );
 }

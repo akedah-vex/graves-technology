@@ -3,6 +3,18 @@ import Navbar from "@/components/Navbar";
 import { FaApple, FaGoogle } from "react-icons/fa";
 
 export default function login() {
+    function triggerAppleLogin(e: React.MouseEvent<HTMLButtonElement>): void {
+        e.preventDefault();
+        // Implement Apple login logic here
+        console.log("Apple login triggered");
+    }
+    
+    function triggerGoogleLogin(e: React.MouseEvent<HTMLButtonElement>): void {
+        e.preventDefault();
+        // Implement Google login logic here
+        console.log("Google login triggered");
+    }
+
   return (
     <div className="min-h-screen bg-neutral-950 text-white"> {/* Changed background to near-black */}
       {/* 1. Navigation Placeholder */}
@@ -27,13 +39,13 @@ export default function login() {
                 {/* apple/google auth options */}
                 <span className="pt-10"/>
                 <div className="flex justify-center space-x-4">
-                    <Button className="border p-4 pl-10 pr-10 hover:cursor-pointer hover:text-gray-300 transition-colors duration-300 ease-in-out">
+                    <Button onClick={(e) => {triggerAppleLogin(e)}} className="border p-4 pl-10 pr-10 hover:cursor-pointer hover:text-gray-300 transition-colors duration-300 ease-in-out">
                         <FaApple className="inline text-3xl" />
                         <p className="pt-2">
                             LOGIN WITH APPLE
                         </p>
                     </Button>
-                    <Button className="border p-4 pl-10 pr-10 hover:cursor-pointer hover:text-gray-300 transition-colors duration-300 ease-in-out">
+                    <Button onClick={(e) => {triggerGoogleLogin(e)}} className="border p-4 pl-10 pr-10 hover:cursor-pointer hover:text-gray-300 transition-colors duration-300 ease-in-out">
                         <FaGoogle className="inline text-2xl" /> 
                         <p className="pt-2">
                             LOGIN WITH GOOGLE

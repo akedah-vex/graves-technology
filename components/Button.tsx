@@ -1,3 +1,4 @@
+
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -6,7 +7,6 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export default function Button ({ children, ...props }: ButtonProps) {
     const classData: string | undefined = props.className
-
     return (
         <button className={classData}>
             { children }

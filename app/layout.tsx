@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Graves Technology",
-  description: "Graves Technology website",
+  description: "Household IT support and sovereign technology solutions",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

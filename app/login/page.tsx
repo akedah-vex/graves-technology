@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import { FaApple, FaGoogle } from "react-icons/fa";
 
 export default function login() {
+    const NavList = ['Home', 'Services', 'About', 'Contact'];
+
     function triggerAppleLogin(e: React.MouseEvent<HTMLButtonElement>): void {
         e.preventDefault();
         // Implement Apple login logic here
@@ -18,7 +20,7 @@ export default function login() {
   return (
     <div className="min-h-screen bg-neutral-950 text-white"> {/* Changed background to near-black */}
       {/* 1. Navigation Placeholder */}
-      <Navbar NavList={['Home', 'Services', 'About', 'Contact', 'Client Login']} />
+      <Navbar NavList={NavList} />
       <section className="bg-neutral-950 pt-32 pb-48 text-white border-b border-neutral-800/70 min-h-[75vh] flex "> {/* Updated classes */}
         <div className="animate-fade-in-slow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-left items-start text-left"> {/* Updated classes */}
           <h1 className="text-shadow-2xl animate-slide-in-top text-5xl md:text-8xl tracking-tight mb-4 leading-tight bg-clip-text justify-left"> {/* Keep gradient styling */}

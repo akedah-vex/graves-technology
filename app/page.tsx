@@ -21,7 +21,7 @@ export default function Home() {
 
           {/* Original Headline */}
           <h2 id="spinner" className="animate-slide-in-right text-5xl md:text-5xl pb-10 pt-5 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-red-400 "> {/* Keep gradient styling */}
-            Keep your technology<br/>sovereign
+            
           </h2>
           <div className="animate-fade-in">
             <p className="mt-4 text-xl md:text-2xl max-w-2xl  text-gray-400 mb-10"> {/* Use standard text classes */}

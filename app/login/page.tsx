@@ -1,21 +1,10 @@
 import Button from "@/components/Button";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { FaApple, FaGoogle } from "react-icons/fa";
 
 export default function login() {
-    const NavList = ['Home', 'Services', 'About', 'Contact'];
-
-    function triggerAppleLogin(e: React.MouseEvent<HTMLButtonElement>): void {
-        e.preventDefault();
-        // Implement Apple login logic here
-        console.log("Apple login triggered");
-    }
-    
-    function triggerGoogleLogin(e: React.MouseEvent<HTMLButtonElement>): void {
-        e.preventDefault();
-        // Implement Google login logic here
-        console.log("Google login triggered");
-    }
+  const NavList = ['Home', 'Services', 'About', 'Contact'];
 
   return (
     <div className="min-h-screen bg-neutral-950 text-white"> {/* Changed background to near-black */}
@@ -38,26 +27,11 @@ export default function login() {
                         LOGIN
                     </p>
                 </Button>
-                {/* apple/google auth options */}
-                <span className="pt-10"/>
-                <div className="flex justify-center space-x-4">
-                    <Button onClick={(e) => {triggerAppleLogin(e)}} className="border p-4 pl-10 pr-10 hover:cursor-pointer hover:text-gray-300 transition-colors duration-300 ease-in-out">
-                        <FaApple className="inline text-3xl" />
-                        <p className="pt-2">
-                            LOGIN WITH APPLE
-                        </p>
-                    </Button>
-                    <Button onClick={(e) => {triggerGoogleLogin(e)}} className="border p-4 pl-10 pr-10 hover:cursor-pointer hover:text-gray-300 transition-colors duration-300 ease-in-out">
-                        <FaGoogle className="inline text-2xl" /> 
-                        <p className="pt-2">
-                            LOGIN WITH GOOGLE
-                        </p>
-                    </Button>
-                </div>
             </form>
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }
